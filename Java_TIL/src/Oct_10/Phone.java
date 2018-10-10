@@ -1,26 +1,6 @@
 package Oct_10;
 
-public class Phone extends Calculator implements Phone_Interface{
-	@Override
-	public int add(int a, int b) {
-		return a + b;
-	}
-
-	@Override
-	public int subtract(int a, int b) {
-		return a > b ? a - b : b - a;
-	}
-
-	@Override
-	public double average(int[] a) {
-		double sum = 0;
-		
-		for (int i : a) {
-			sum += i;
-		}
-		
-		return sum / a.length;
-	}
+public class Phone implements Phone_Interface{
 	
 	@Override
 	public void sendCall() {
