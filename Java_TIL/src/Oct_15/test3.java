@@ -8,23 +8,29 @@ import java.util.List;
 public class test3 {
 
 	public static void main(String[] args) {
+		List<String> result = new ArrayList<>();
 		
-		List<String> result = new ArrayList<String>();
-		test3 ex = new test3();
-		result = ex.addArray(new String[]{ "1", "2", "3", "4", "5" }, new String[]{ "A", "B", "C", "D", "E" });
-		for (String str : result) {
-			System.out.println(str);
-		}
-		Iterator it = result.iterator();
+		result = addArray(new String[]{ "1", "2", "3", "4", "5" }, new String[]{ "A", "B", "C", "D", "E" });
+		
+		Iterator<String> it = result.iterator();
+		//Iterator는 Collections, List, Map, Set 등을 열거(Enumeration)할 때 사용
 		
 		while (it.hasNext()) {
-			System.out.println("*" + it.next());
+			System.out.print(it.next() + " ");
 		}
 	}
 
-	private List<String> addArray(String[] arr1, String[] arr2) {
-		List<String> list = new ArrayList<String>(Arrays.asList(arr1));
+	private static List<String> addArray(String[] arr1, String[] arr2) {
+		List<String> list = new ArrayList<>(Arrays.asList(arr1));
+		//할당할 클래스의 제네릭 Wrapper 클래스는 생략해도 됨
 		list.addAll(Arrays.asList(arr2));
+		
+		/*
+		 * for (String str : arr1) list.add(str);
+		 * for (String str : arr2) list.add(str);
+		 * 이 방법도 가능
+		 */
+		
 		return list;
 	}
 
