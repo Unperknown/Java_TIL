@@ -27,17 +27,17 @@ class method {
 	public String WinnerRet(int stat){
 		String result;
 		switch (stat){
-			case -1:
-				result = "DRAW";
-				break;
-			case 0:
-				result = "Winner is Player2";
-				break;
-			case 1:
-				result = "Winner is Player1";
-				break;
-			default:
-				result = "ERROR!";
+		case -1:
+			result = "DRAW";
+			break;
+		case 0:
+			result = "Winner is Player2";
+			break;
+		case 1:
+			result = "Winner is Player1";
+			break;
+		default:
+			result = "ERROR!";
 		}
 		return result;
 	}

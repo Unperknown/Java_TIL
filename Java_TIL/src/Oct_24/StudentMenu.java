@@ -33,8 +33,8 @@ public class StudentMenu {
 				}
 				break;
 			case 4:
-				System.exit(-1);
 				scan.close();
+				System.exit(-1);
 				break;
 			}
 		}
