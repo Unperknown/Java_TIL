@@ -19,6 +19,8 @@ public class Machine_Sort {
 		for (Machine machine : machines) {
 			System.out.println(machine.number + " " + machine.gas_size);
 		}
+		
+		scan.close();
 	}
 }
 
