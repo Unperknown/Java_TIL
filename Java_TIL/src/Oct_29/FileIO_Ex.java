@@ -12,6 +12,14 @@ public class FileIO_Ex {
 	public static void main(String[] args) {
 		File file = new File("test2.txt");
 
+		if (!file.exists()) {
+			try {
+				file.createNewFile();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
 		try {
 			FileOutputStream fout = new FileOutputStream(file);
 			BufferedOutputStream fbuf = new BufferedOutputStream(fout, 512);
