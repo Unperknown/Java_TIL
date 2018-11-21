@@ -14,17 +14,16 @@ import javax.swing.JTextField;
 
 public class frame extends JFrame {
 	Map<String, JTextField> context = new HashMap<>();
+	final String[] label = { "이름", "학번", "학과", "과목" };
 	
 	public frame() {
- 		setTitle("프레임");
+ 		setTitle("정보 입력");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		Container c = getContentPane();
 		GridLayout grid = new GridLayout(5, 2);
 		c.setLayout(grid);
 		grid.setVgap(5);
-		
-		String[] label = { "이름", "학번", "학과", "과목" };
 		
 		for (String string : label) {
 			context.put(string, new JTextField(""));
